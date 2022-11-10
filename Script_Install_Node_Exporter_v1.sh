@@ -290,7 +290,7 @@ do
         esac
 done
 
-####Vérifie si l'archive de Node_Exporter est déjà présente ou la prend depuis 172.17.50.50, ou la prend depuis Internet
+####Vérifie si l'archive de Node_Exporter est déjà présente ou la prend depuis un serveur local distant ou la prend depuis Internet
 
 if [ ! -f /usr/share/$ARCHIVE ]
 then
