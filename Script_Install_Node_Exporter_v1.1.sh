@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #made by jonathan ORTEGA
 #Script qui permet de récupérer et installer Node exporter
 #####################################################################
