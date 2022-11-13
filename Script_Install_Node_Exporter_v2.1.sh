@@ -109,7 +109,7 @@ fonction_verif_bin_nodexp_exist() {
 
 #####Fonction si archive conforme demande si retente
 
-fonction_yes_no_archive_conformE_q10() {
+fonction_yes_no_archive_conforme_q10() {
         question_10="empty"
         while [ "${question_10}" != "yes" ] && [ "${question_10}" != "no" ]
         do
@@ -163,7 +163,7 @@ fonction_download_nodexp_from_internet() {
         do
                 printf "entrez le lien de téléchargement de l'archive Node exporter\n"
                 printf "Avertissement, vérifiez bien que le lien soit le bon\n"
-                printf "Lien : "
+                printf "Lien URL : "
                 read lien_telechargement
 
                 wget -T 5 -t 1 --no-http-keep-alive --no-cache --no-cookies -P /usr/share "${lien_telechargement}"
@@ -318,7 +318,7 @@ do
                 archive_conform="yes"
                 ;;
             * )
-		            fonction_yes_no_archive_conformE_q10
+		            fonction_yes_no_archive_conforme_q10
                 ;;
         esac
 done
