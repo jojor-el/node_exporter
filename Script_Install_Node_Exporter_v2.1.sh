@@ -416,6 +416,9 @@ done
 
 fonction_user_install_status
 
+chown node_exporter:node_exporter /usr/local/bin/node_exporter
+printf "l'utilisateur \""${user_node}"\"est devenu propriétaire du fichier bin \" node_exporter \"\n"
+
 #####Vérifie si le service Node exporter est déjà existant dans /etc/systemd/system, sinon en crée un , si oui compare à un fichier test
 
 if [ ! -e "${chemin_service}" ]
@@ -437,7 +440,7 @@ sudo systemctl start node_exporter
 
 if [ $( systemctl show -p ActiveState --value node_exporter ) = "active" ]
 then
-        printf "\nle service node exporter est actif\n"
+        printf "le service node exporter est actif\n"
         printf "l'installation est terminé\n"
         printf "la page web de node exporter devrait être accessible depuis le port 9100\n"
         printf "Node exporter fonctionne en général avec prometheus aussi n'oubliez pas de compléter le fichier .yml de prmetheus \n"
